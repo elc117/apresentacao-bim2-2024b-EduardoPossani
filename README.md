@@ -67,17 +67,13 @@ public class UncheckedExample {
     }
 }
 ```
-📊 Comparação: Checked vs Unchecked
-Aspecto	Exceções Checked	Exceções Unchecked
-Verificação	Em tempo de compilação	Em tempo de execução
-Origem	Classe Exception (exceto RuntimeException)	Classe RuntimeException
-Tratamento Obrigatório	Sim	Não
-Exemplos	IOException, SQLException	NullPointerException, ArithmeticException
-🛠️ Boas Práticas ao Lidar com Exceções
-Evite capturar exceções genéricas: Capture exceções específicas sempre que possível.
-Use mensagens claras: Certifique-se de que as mensagens de erro são informativas.
-Não abuse do tratamento de exceções: Use exceções para tratar erros imprevisíveis, não como controle de fluxo.
+## Diferenças entre Checked e Unchecked Exceptions
 
+| **Aspecto**             | **Checked Exceptions**                             | **Unchecked Exceptions**                      |
+|--------------------------|---------------------------------------------------|-----------------------------------------------|
+| **Herança**              | Subclasse de `Exception` (exceto `RuntimeException`) | Subclasse de `RuntimeException`             |
+| **Obrigação de Tratamento** | O compilador exige tratamento ou declaração         | Não exige tratamento ou declaração          |
+| **Causa Comum**          | Erros externos (ex.: falhas de I/O)               | Erros de lógica ou programação               |
 
 ## 📚 Referências
 Documentação Oficial do Java - Exceções
